@@ -72,35 +72,8 @@ disease_model.eval()
 # Loading crop recommendation model
 
 
-# =========================================================================================
-
-# Custom functions for calculations
 
 
-def weather_fetch(city_name):
-    """
-    Fetch and returns the temperature and humidity of a city
-    :params: city_name
-    :return: temperature, humidity
-    """
-    api_key = config.weather_api_key
-    base_url = "https://api.openweathermap.org/data/2.5/weather?"
-
-    complete_url = base_url + "appid=" + api_key + "&q=" + city_name.lstrip()
-    print(city_name)
-    print(complete_url)
-    # https://api.openweathermap.org/data/2.5/weather?appid=7e565c5c6afa29d0a90a8d814342305d&q=Bhimavaram
-    response = requests.get(complete_url)
-    x = response.json()
-
-    if x["cod"] != "404":
-        y = x["main"]
-
-        temperature = round((y["temp"] - 273.15), 2)
-        humidity = y["humidity"]
-        return temperature, humidity
-    else:
-        return None
 
 
 def predict_image(img, model=disease_model):
