@@ -18,7 +18,7 @@ CropGuard is a web application that helps farmers and agriculturalists make info
 1. Clone the repository:
    ```bash
    git clone <your-repo-url>
-   cd Harvestify/app
+   cd CropGuard/app
    ```
 2. (Optional) Create and activate a virtual environment:
    ```bash
@@ -41,9 +41,9 @@ CropGuard is a web application that helps farmers and agriculturalists make info
 
 ## Project Structure
 ```
-Harvestify/app/
+CropGuard/app/
 ├── app.py                # Main Flask application
-├── config.py             # API keys and configuration
+├
 ├── utils/
 │   ├── disease.py        # Disease info dictionary
 │   ├── fertilizer.py     # Fertilizer info dictionary
@@ -58,7 +58,7 @@ Harvestify/app/
 │   ├── images/           # Images for UI
 │   └── temp_uploads/     # Temporary image uploads
 ├── requirements.txt      # Python dependencies
-├── Procfile              # For deployment (e.g., Heroku)
+|
 └── Runtime.txt           # Python version for deployment
 ```
 
